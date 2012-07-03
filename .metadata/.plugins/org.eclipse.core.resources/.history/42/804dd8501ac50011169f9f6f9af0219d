@@ -1,0 +1,5 @@
+package com.github.SaxSalute.HomeManager;
+
+public class HomeInfoCommandExecutor {
+
+}
