@@ -39,8 +39,8 @@ public class HomeManager extends JavaPlugin
 		//Registers the block break listener
 		getServer().getPluginManager().registerEvents(new BlockBreakListener(this), this);
 		
-		//saveload = new SaveLoad(this);
-		//saveload.loadData();
+		saveload = new SaveLoad(this);
+		saveload.loadData();
 	}
 	
 	public void onDisable()

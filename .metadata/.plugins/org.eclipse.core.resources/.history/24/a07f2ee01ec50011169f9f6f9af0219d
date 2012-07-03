@@ -46,27 +46,13 @@ public class HomeInfoCommandExecutor implements CommandExecutor
 				}
 				if (args.length == 2 && args[0].equalsIgnoreCase("details"))
 				{
-					int position = -1;
-					
-					//Find the index of the regin name in the regions ArrayList
-					for (int x = 0; x < plugin.regions.size() && position == -1; x++)
+					if (plugin.regions.indexOf(args[1]) != -1)
 					{
-						if (plugin.regions.get(x).getName().equalsIgnoreCase(args[1]))
-						{
-							position = x;
-						}
-					}
-					
-					if (position != -1)
-					{
-						sender.sendMessage(ChatColor.BLUE + args[1]);
-						sender.sendMessage(ChatColor.YELLOW + "Owner: " +  plugin.regions.get(position).getOwner().getName());
-						return true;
+						
 					}
 					else
 					{
-						sender.sendMessage(ChatColor.RED + "No home named " + args[1] + " was found.");
-						return true;
+						sender.sendMessage("No home named " + args[1] + " was found.")
 					}
 				}
 			}

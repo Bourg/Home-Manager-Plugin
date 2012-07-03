@@ -20,7 +20,7 @@ public class CreateHomeCommandExecutor implements CommandExecutor
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
 	{
-		//plugin.saveload.saveData();
+		plugin.saveload.saveData();
 		
 		//Stores the sender in the variable player if the sender is not the console
 		Player player = null;

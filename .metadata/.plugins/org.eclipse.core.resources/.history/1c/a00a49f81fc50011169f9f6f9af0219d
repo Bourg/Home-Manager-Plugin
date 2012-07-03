@@ -48,7 +48,7 @@ public class HomeInfoCommandExecutor implements CommandExecutor
 				{
 					int position = -1;
 					
-					//Find the index of the regin name in the regions ArrayList
+					//Find the index of the regin name in the regions arraylist
 					for (int x = 0; x < plugin.regions.size() && position == -1; x++)
 					{
 						if (plugin.regions.get(x).getName().equalsIgnoreCase(args[1]))
@@ -59,9 +59,8 @@ public class HomeInfoCommandExecutor implements CommandExecutor
 					
 					if (position != -1)
 					{
-						sender.sendMessage(ChatColor.BLUE + args[1]);
-						sender.sendMessage(ChatColor.YELLOW + "Owner: " +  plugin.regions.get(position).getOwner().getName());
-						return true;
+						sender.sendMessage(ChatColor.BLUE + "args[1]");
+						sender.sendMessage(ChatColor.YELLOW + "Owner: " +  plugin.regions.get)
 					}
 					else
 					{

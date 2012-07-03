@@ -61,7 +61,6 @@ public class HomeInfoCommandExecutor implements CommandExecutor
 					{
 						sender.sendMessage(ChatColor.BLUE + args[1]);
 						sender.sendMessage(ChatColor.YELLOW + "Owner: " +  plugin.regions.get(position).getOwner().getName());
-						return true;
 					}
 					else
 					{

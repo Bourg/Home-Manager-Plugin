@@ -30,7 +30,7 @@ public class HomeInfoCommandExecutor implements CommandExecutor
 			}
 			
 			//If either one or zero arguments have been supplied
-			if (args.length <= 2)
+			if (args.length <= 1)
 			{
 				//If no argument has been supplied or the argument supplied was "all"
 				if (args.length == 0 || args[0].equalsIgnoreCase("all"))
@@ -40,38 +40,12 @@ public class HomeInfoCommandExecutor implements CommandExecutor
 					//If there are homes
 					for (Region r : plugin.regions)
 					{
-						sender.sendMessage(ChatColor.YELLOW + r.getName());
+						sender.sendMessage(ChatColor.YELLOW + r.getName() + " : owned by " + r.getOwner().getName());
 					}
 					return true;
 				}
-				if (args.length == 2 && args[0].equalsIgnoreCase("details"))
-				{
-					int position = -1;
-					
-					//Find the index of the regin name in the regions ArrayList
-					for (int x = 0; x < plugin.regions.size() && position == -1; x++)
-					{
-						if (plugin.regions.get(x).getName().equalsIgnoreCase(args[1]))
-						{
-							position = x;
-						}
-					}
-					
-					if (position != -1)
-					{
-						sender.sendMessage(ChatColor.BLUE + args[1]);
-						sender.sendMessage(ChatColor.YELLOW + "Owner: " +  plugin.regions.get(position).getOwner().getName());
-						return true;
-					}
-					else
-					{
-						sender.sendMessage(ChatColor.RED + "No home named " + args[1] + " was found.");
-						return true;
-					}
-				}
 			}
 			
-			//If more than two arguments have been supplied
 			else
 			{
 				sender.sendMessage(ChatColor.RED + "/homeinfo takes one of the following modifiers:\nall - List all existing homes");
