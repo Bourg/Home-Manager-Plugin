@@ -1,0 +1,4 @@
+Add Delete Function
+Refactor Command System
+Setup Default Permissions
+Add Money System
