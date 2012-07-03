@@ -50,14 +50,6 @@ public class HomeManagerCommandExecutor implements CommandExecutor
 						
 						if (plugin.regions.size() == 0 || !(tempRegion.overlap(plugin.regions)))
 						{
-							
-							sender.sendMessage(plugin.selectedLocations.get(player)[0] == null ? "Selected Location 0 is null." : "Selected Location 0 is not null");
-							sender.sendMessage(plugin.selectedLocations.get(player)[1] == null ? "Selected Location 1 is null." : "Selected Location 1 is not null");
-							sender.sendMessage(args[0] == null ? "Argument 0 is null." : "Argument 0 is not null");
-							sender.sendMessage(player == null ? "Player is null." : "Player is not null");
-							sender.sendMessage(tempRegion == null ? "testRegion is null" : "testRegion is not null");
-							sender.sendMessage(plugin.regions == null ? "regions is null" : "regions is not null");
-								
 							plugin.regions.add(tempRegion);
 							sender.sendMessage(ChatColor.GREEN + "Region " + args[0] + " has been created successfully!");
 							return true;
